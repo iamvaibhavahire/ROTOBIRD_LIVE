@@ -122,7 +122,7 @@ class GodotProcessor extends AudioWorkletProcessor {
 		if (p_cmd === 'start' && p_data) {
 			const state = p_data[0];
 			let idx = 0;
-			this.threads = false;
+			this.threads = true;
 			this.lock = state.subarray(idx, ++idx);
 			this.notifier = state.subarray(idx, ++idx);
 			const avail_in = state.subarray(idx, ++idx);
